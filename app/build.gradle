@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
+
+    defaultConfig {
+        applicationId "org.absolutedimension.swachcityabhiyan"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //  compile files('libs/robovm-rt-0.0.7.jar')
+    testCompile 'junit:junit:4.12'
+    //compile 'org.robovm:robovm-rt:0.0.7'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.google.android.gms:play-services-identity:8.4.0'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile files('libs/java2html.jar')
+    compile files('libs/slf4j-api-1.7.7.jar')
+    compile files('libs/flickrj-android-2.1.0.jar')
+
+    compile(name:'Chart-2016.1.316-trial-release', ext:'aar')
+    compile(name:'Common-2016.1.316-trial-release', ext:'aar')
+    compile(name:'Data-2016.1.316-trial-release', ext:'aar')
+    compile(name:'Feedback-2016.1.316-trial-release', ext:'aar')
+    compile(name:'Input-2016.1.316-trial-release', ext:'aar')
+    compile(name:'List-2016.1.316-trial-release', ext:'aar')
+    compile(name:'Primitives-2016.1.316-trial-release', ext:'aar')
+
+    compile 'com.facebook.fresco:fresco:0.5.0'
+
+}
+
+
